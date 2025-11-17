@@ -225,8 +225,15 @@
     </section>
 
     <!-- Pending Approvals -->
-    <section v-if="pendingProperties.length > 0" class="pending-section">
+    <section  class="pending-section">
       <h2 class="section-title">Pending Property Approvals</h2>
+      <div v-if="pendingProperties.length === 0" class="no-pending">
+        <svg class="no-pending-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+        <p class="no-pending-text">All properties have been reviewed!</p>
+        <p class="no-pending-subtext">No pending approvals at this time.</p>
+      </div>
       <div class="pending-list">
         <div v-for="property in pendingProperties" :key="property.id" class="pending-card">
           <div class="pending-info">
@@ -1091,3 +1098,27 @@ onMounted(() => {
   }
 }
 </style>
+/* Empty State */
+.no-pending {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.no-pending-icon {
+  width: 4rem;
+  height: 4rem;
+  color: #48bb78;
+  margin: 0 auto 1rem auto;
+}
+
+.no-pending-text {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0 0 0.5rem 0;
+}
+
+.no-pending-subtext {
+  color: #a0aec0;
+  margin: 0;
+}
