@@ -108,7 +108,7 @@
         <div class="quick-access">
           <button
             type="button"
-            @click="fillCredentials('test2@masqani.com', 'Test123')"
+            @click="fillCredentials('alice@guest.com', 'password123')"
             class="access-card guest-card"
             :disabled="loading"
           >
@@ -126,7 +126,7 @@
 
           <button
             type="button"
-            @click="fillCredentials('host@masqani.com', 'Test123')"
+            @click="fillCredentials('john.doe@host.com', 'password123')"
             class="access-card host-card"
             :disabled="loading"
           >
@@ -144,7 +144,7 @@
 
           <button
             type="button"
-            @click="fillCredentials('admin2@masqani.com', 'Test123')"
+            @click="fillCredentials('admin@masqani.com', 'password123')"
             class="access-card admin-card"
             :disabled="loading"
           >
