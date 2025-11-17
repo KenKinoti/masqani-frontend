@@ -158,7 +158,7 @@ const userRoleLabel = computed(() => {
 
 const mainNavItems = computed(() => [
   {
-    path: userRole.value === 'admin' ? '/admin/dashboard' : '/dashboard',
+    path: '/dashboard',
     label: 'Dashboard',
     icon: '<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="3" width="6" height="6" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="11" y="3" width="6" height="6" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="3" y="11" width="6" height="6" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="11" y="11" width="6" height="6" rx="1" stroke="currentColor" stroke-width="1.5"/></svg>'
   },

@@ -9,7 +9,7 @@
           </h1>
           <p class="hero-subtitle">{{ heroSubtitle }}</p>
         </div>
-        <div class="hero-actions">
+        <div class="hero-actions" v-if="userRole !== 'admin'">
           <router-link v-if="userRole !== 'guest'" to="/properties/new" class="btn-hero btn-primary">
             <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
